@@ -1,0 +1,44 @@
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 8px 16px;
+    background-color: #2a3b49;
+}
+
+.header-container h1 {
+    font-size: 36px;
+    font-weight: 300;
+    color: #7BFFE9;
+
+    cursor: pointer;
+}
+
+.links-container {
+    width: 35%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.link {
+    color: white;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.darkmode-btn {
+    color: #7BFFE9;
+    font-size: 18px;
+    background: none;
+    border: none;
+
+    cursor: pointer;
+}
+
+/* Tablet Display Setting */
+@media screen and (max-width: 1000px) {
+    .links-container {
+        width: 50%;
+    }
+}

@@ -1,0 +1,58 @@
+.current-collection-container {
+    padding: 48px 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.current-collection-dark {
+    color: white;
+    background-color: #2a3b49;
+}
+
+.current-collection-info {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.current-collection-info h1 {
+    font-size: 40px;
+    margin-bottom: 24px;
+}
+
+.current-collection-info p {
+    font-size: 36px;
+    font-weight: 300;
+}
+
+.current-collection-container img {
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.counter {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.btns-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-change {
+    width: 128px;
+    margin: 16px;
+    padding: 8px;
+    font-size: 24px;
+    color: #7BFFE9;
+    background-color: #2a3b49;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+.btn-dark {
+    border: 1px solid #7BFFE9;
+}

@@ -1,0 +1,87 @@
+.about-page {
+    min-height: 100vh;
+    padding: 40px 72px;
+
+    display: flex;
+    flex-direction: column;
+
+    font-size: 20px;
+}
+
+.about-page-dark {
+    background-color: #2a3b49;
+    color: white;
+}
+
+.about-summary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-bottom: 32px;
+}
+
+.about-summary h2 {
+    margin-bottom: 24px;
+}
+
+.about-details {
+    display: flex;
+}
+
+.about-details div {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-details p {
+    margin-bottom: 40px;
+}
+
+.about-submit-btn {
+    border: none;
+    border-radius: 60px;
+    font-size: 36px;
+    background-color: #2a3b49;
+    color: #7BFFE9;
+    cursor: pointer;
+    width: 50%;
+    padding: 32px;
+    margin-top: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-submit-btn-dark {
+    border: 1px solid #7BFFE9;
+}
+
+aside {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+aside img {
+    width: 80%;
+    height: fit-content;
+    border-radius: 8px;
+}
+
+/* Tablet Display Setting */
+@media screen and (max-width: 1000px) {
+    .about-page {
+        padding: 20px 40px;
+    }
+    .about-submit-btn {
+        align-self: center;
+        width: 70%;
+        font-size: 24px;
+    }
+    aside img {
+        width: 90%;
+    }
+}

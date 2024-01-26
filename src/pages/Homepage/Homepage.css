@@ -1,0 +1,53 @@
+.homepage-container {
+    min-height: 95vh;
+    background-image: url('../../assets/homepage.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.homepage-container p {
+    width: 45%;
+    font-size: 30px;
+    font-weight: 300;
+    text-align: center;
+    color: white;
+    background-color: #2a3b49;
+    padding: 48px;
+    border-radius: 150px 150px 150px 0;
+}
+
+.submit-btn {
+    font-size: 36px;
+    color: #7BFFE9;
+    background: transparent;
+    border: 2px solid #7BFFE9;
+    border-radius: 60px;
+    padding: 32px 48px;
+    margin: 0 24px 24px 0;
+
+    cursor: pointer;
+}
+
+/* Tablet Display Setting */
+@media screen and (max-width: 1000px) {
+    .homepage-container {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+
+    .homepage-container p {
+        font-size: 20px;
+        border-radius: 32px;
+    }
+
+    .submit-btn {
+        font-size: 24px;
+        padding: 24px 32px;
+        margin-left: 56px;
+    }
+}
