@@ -19,12 +19,28 @@
     width: 35%;
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 .link {
     color: white;
     font-size: 18px;
     font-weight: 300;
+}
+
+.user {
+    color: white;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.signin {
+    color: #7BFFE9;
+    font-size: 18px;
+    font-weight: 500;
+    border: 1px solid #7BFFE9;
+    border-radius: 20px;
+    padding: 8px 16px;
 }
 
 .darkmode-btn {
@@ -39,6 +55,6 @@
 /* Tablet Display Setting */
 @media screen and (max-width: 1000px) {
     .links-container {
-        width: 50%;
+        width: 65%;
     }
 }

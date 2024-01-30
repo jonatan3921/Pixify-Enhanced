@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom'
 import { doc, getDoc } from 'firebase/firestore'
 import { db } from '../../config/firebaseConfig'
 import { ThemeContext } from '../../context/ThemeContext'
+import Comments from '../../components/Comments/Comments'
 
 function SubmissionDetails() {
     const {submissionId} = useParams()
@@ -58,6 +59,7 @@ function SubmissionDetails() {
             <button className={darkMode ? 'btn-change btn-dark' : 'btn-change'} onClick={handlePrevious}>Previous</button>
             <button className={darkMode ? 'btn-change btn-dark' : 'btn-change'} onClick={handleNext}>Next</button>
         </div>
+        <Comments submissionId={submissionId}/>
     </div>
   )
 }

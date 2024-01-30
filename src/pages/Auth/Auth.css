@@ -1,0 +1,46 @@
+.auth-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-page-dark {
+    background-color: #2a3b49;
+}
+
+.auth-page form {
+    margin: 0;
+    width: 50%;
+    min-height: 450px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.auth-page .form-dark {
+    border: 1px solid #7BFFE9;
+}
+
+.auth-page form p {
+    color: white;
+    font-size: 18px;
+    font-weight: 300;
+    font-style: italic;
+}
+
+p span {
+    color: #7BFFE9;
+    cursor: pointer;
+}
+
+.auth-page button {
+    width: 40%;
+    font-size: 20px;
+    color: #7BFFE9;
+    background: none;
+    border: 1px solid #7BFFE9;
+    border-radius: 24px;
+    padding: 16px;
+}

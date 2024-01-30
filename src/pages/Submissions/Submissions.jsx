@@ -4,6 +4,9 @@ import { db } from '../../config/firebaseConfig'
 import { collection, getDocs, addDoc } from 'firebase/firestore'
 import { useNavigate} from 'react-router-dom'
 import { ThemeContext } from '../../context/ThemeContext';
+import { auth } from '../../config/firebaseConfig'
+import {useAuthState} from 'react-firebase-hooks/auth'
+
 
 function Submissions() {
       const [formData, setFormData] = useState({
@@ -23,10 +26,16 @@ function Submissions() {
       const [submissions, setSubmissions] = useState([])
       const navigate = useNavigate()
       const {darkMode} = useContext(ThemeContext)
+      const [user] = useAuthState(auth)
       
     
       useEffect(
         () => {
+          // If user is log in set its name as default for submissions
+          if (user) {
+            setFormData({...formData, name: user?.displayName, userId: user?.uid})
+          }
+
           //Create a variable to reference the imageSets collection
           const submissionsRef = collection(db, 'imageSets')
           getDocs(submissionsRef)
@@ -55,6 +64,8 @@ function Submissions() {
             //   ...prevObject,
             //   images: [...prevObject.images, imageInput1, imageInput2, imageInput3, imageInput4, imageInput5]
             // }))
+
+            
     
             // use addDoc to add the submission to the collection
             addDoc(submissionRef, {
@@ -95,10 +106,15 @@ function Submissions() {
 
         <form onSubmit={handleSubmit}>
           <h2>SUBMIT YOUR WORK</h2>
-          <input type="text" placeholder='Your Name' value={nameInput} onChange={(e) => {
-            setNameInput(e.target.value)
-            setFormData({...formData, name: e.target.value})
-          }} required/>
+          {
+            user
+            ? null
+            :
+            <input type="text" placeholder='Your Name' value={nameInput} onChange={(e) => {
+              setNameInput(e.target.value)
+              setFormData({...formData, name: e.target.value})
+            }} required/>
+          }
 
           <input type="text" placeholder='Title of Your Entry' value={titleInput} onChange={(e) => {
             setTitleInput(e.target.value)

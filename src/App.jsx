@@ -7,6 +7,8 @@ import About from './pages/About/About'
 import Submissions from './pages/Submissions/Submissions'
 import SubmissionDetails from './pages/SubmissionDetails/SubmissionDetails'
 import ThemeContextProvider from './context/ThemeContext'
+import Auth from './pages/Auth/Auth'
+import Account from './pages/Account/Account'
 
 function App() {
 
@@ -19,6 +21,8 @@ function App() {
         <Route path='/submissions' element={<Submissions/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/submission/:submissionId' element={<SubmissionDetails/>}/>
+        <Route path='/auth' element={<Auth/>}/>
+        <Route path='/account/:userId' element={<Account/>}/>
       </Routes>
     </ThemeContextProvider>
     </BrowserRouter>

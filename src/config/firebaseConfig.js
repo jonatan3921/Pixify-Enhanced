@@ -6,6 +6,9 @@ import { initializeApp } from "firebase/app";
 // Allows you to connect to the database
 import {getFirestore} from 'firebase/firestore'
 
+// For Auth
+import {getAuth} from "firebase/auth"
+
 // Allos you to connect with the storage
 import {getStorage} from 'firebase/storage'
 
@@ -24,6 +27,9 @@ const app = initializeApp(firebaseConfig);
 
 // Set up database and export it
 export const db = getFirestore(app)
+
+// Set up auth and export it
+export const auth = getAuth(app)
 
 // Set up storage and active it
 export const storage = getStorage(app);
