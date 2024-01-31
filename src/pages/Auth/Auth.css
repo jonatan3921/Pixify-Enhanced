@@ -44,3 +44,16 @@ p span {
     border-radius: 24px;
     padding: 16px;
 }
+
+/* Small Phone Display Setting */
+@media screen and (max-width: 400px) {
+    .auth-page form {
+        width: 75%;
+    }
+
+    .auth-page button {
+        margin: 16px 0;
+        width: 75%;
+        padding: 12px;
+    }
+}

@@ -85,3 +85,34 @@ aside img {
         width: 90%;
     }
 }
+
+/* Small Phone Display Setting */
+@media screen and (max-width: 400px) {
+    .about-summary p {
+        text-align: center;
+    }
+
+    .about-details {
+        flex-direction: column-reverse;
+    }
+    
+    aside {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 32px;
+    }
+
+    .about-details div {
+        width: 100%;
+    }
+
+    .about-details div p {
+        text-align: center;
+    }
+
+    .about-submit-btn {
+        font-size: 20px;
+        margin-top: 0;
+        padding: 24px;
+    }
+}

@@ -46,7 +46,7 @@ function Account() {
 
   return (
     <div className={darkMode ? 'account-page account-page-dark' : 'account-page'}>
-        <div className={darkMode ? 'account-info account-info-dark' : 'account-info'}>
+        <div className='account-info'>
             <p>{user?.displayName}</p>
             <button className='logout-btn' onClick={handleLogout}>Log out</button>
         </div>

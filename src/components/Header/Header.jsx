@@ -20,6 +20,8 @@ function Header() {
   return (
     <div className='header-container'>
         <h1 onClick={() => navigate('/')}>PIXIFY</h1>
+        <label className='burger' htmlFor='menuchk'>&#9776;</label>
+        <input type='checkbox' id='menuchk'/>
         <div className='links-container'>
             <Link className='link' to={'/submissions'}><p>Submissions</p></Link>
             <Link className='link' to={'/about'}><p>About</p></Link>

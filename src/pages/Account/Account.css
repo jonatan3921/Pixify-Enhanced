@@ -18,12 +18,10 @@
     height: fit-content;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     border-radius: 16px;
 }
 
-.account-info-dark {
-    /* border: 1px solid #7BFFE9; */
-}
 
 .account-info p {
     color: white;
@@ -59,4 +57,34 @@
 
 .user-submissions img {
     width: 100%;
+}
+
+/* Tablet Display Setting */
+@media screen and (max-width: 1000px) {
+    .account-info {
+        width: 75%;
+    }
+}
+
+/* Small Phone Display Setting */
+@media screen and (max-width: 400px) {
+    .account-page {
+        padding: 40px 32px;
+    }
+
+    .account-info {
+        width: 100%;
+    }
+
+    .account-info p {
+        font-size: 24px;
+    }
+
+    .account-info button {
+        font-size: 24px;
+    }
+
+    .heading {
+        font-size: 32px;
+    }
 }

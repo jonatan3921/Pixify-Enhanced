@@ -15,6 +15,14 @@
     cursor: pointer;
 }
 
+.burger {
+    display: none;
+}
+
+#menuchk {
+    display: none;
+}
+
 .links-container {
     width: 35%;
     display: flex;
@@ -56,5 +64,28 @@
 @media screen and (max-width: 1000px) {
     .links-container {
         width: 65%;
+    }
+}
+
+/* Small Phone Display Setting */
+@media screen and (max-width: 400px) {
+    .burger {
+        display: block;
+        color: #7BFFE9;
+        font-size: 28px;
+    }
+
+    #menuchk:checked + .links-container {
+        background-color: #2a3b49;
+        padding: 16px 4px;
+        display: flex;
+        position: absolute;
+        top: 56px;
+        right: 0;
+    }
+
+    .links-container {
+        display: none;
+        width: 100%;
     }
 }

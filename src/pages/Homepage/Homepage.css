@@ -51,3 +51,27 @@
         margin-left: 56px;
     }
 }
+
+
+/* Small Phone Display Setting */
+@media screen and (max-width: 400px) {
+    .homepage-container {
+        min-height: 92vh;
+        background-position: center;
+        flex-direction: row;
+        align-items: flex-end;
+    }
+
+    .homepage-container p {
+        width: 55%;
+        font-size: 16px;
+        padding: 16px;
+        margin: 0 0 8px 0;
+    }
+
+    .submit-btn {
+        font-size: 16px;
+        padding: 16px 24px;
+        margin: 0 0 8px 0;
+    }
+}
