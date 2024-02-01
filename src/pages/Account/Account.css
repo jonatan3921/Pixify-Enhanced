@@ -69,7 +69,7 @@
 /* Small Phone Display Setting */
 @media screen and (max-width: 400px) {
     .account-page {
-        padding: 40px 32px;
+        padding: 40px 48px;
     }
 
     .account-info {
@@ -87,4 +87,6 @@
     .heading {
         font-size: 32px;
     }
+
+    
 }

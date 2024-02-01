@@ -102,9 +102,9 @@ aside img {
         margin-bottom: 32px;
     }
 
-    /* aside img {
-        max-height: ;
-    } */
+    aside img {
+        max-height: 200px;
+    } 
 
     .about-details div {
         width: 100%;
