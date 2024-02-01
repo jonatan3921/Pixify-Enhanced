@@ -102,6 +102,10 @@ aside img {
         margin-bottom: 32px;
     }
 
+    aside img {
+        height: fit-content;
+    }
+
     .about-details div {
         width: 100%;
     }
