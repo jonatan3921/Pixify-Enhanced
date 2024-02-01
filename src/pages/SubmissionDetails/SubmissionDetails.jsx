@@ -1,13 +1,18 @@
 import React, {useState, useEffect, useContext} from 'react'
 import './SubmissionDetails.css'
-import { useParams } from 'react-router-dom'
-import { doc, getDoc } from 'firebase/firestore'
+import { useParams, useNavigate } from 'react-router-dom'
+import { doc, getDoc, deleteDoc } from 'firebase/firestore'
 import { db } from '../../config/firebaseConfig'
 import { ThemeContext } from '../../context/ThemeContext'
 import Comments from '../../components/Comments/Comments'
+import { auth } from '../../config/firebaseConfig'
+import {useAuthState} from 'react-firebase-hooks/auth'
+
 
 function SubmissionDetails() {
+    const [user] = useAuthState(auth)
     const {submissionId} = useParams()
+    const navigate = useNavigate()
     const {darkMode} = useContext(ThemeContext)
     const [submission, setSubmission] = useState({})
     const [count, setCount] = useState(0)
@@ -43,6 +48,16 @@ function SubmissionDetails() {
         }
     }
 
+    const deleteSubmission = (id) => {
+        // we need the id of the submission to delete it so we are passing it as a function parameter
+        // get the particular document with this id
+        deleteDoc(doc(db, 'imageSets', id))
+        .then(res => {
+            navigate('/submissions')
+        })
+        .catch(err => console.log(err))
+    }
+
     const image = submission?.images ? <img src={submission?.images[count]} alt={submission?.title}/> : null
     const imgNumber = submission?.images ? <p className='counter'>{count+ 1} of {submission?.images.length}</p> : null
 
@@ -58,6 +73,11 @@ function SubmissionDetails() {
         <div className='btns-container'>
             <button className={darkMode ? 'btn-change btn-dark' : 'btn-change'} onClick={handlePrevious}>Previous</button>
             <button className={darkMode ? 'btn-change btn-dark' : 'btn-change'} onClick={handleNext}>Next</button>
+            {
+                user?.uid == submission?.userId ?
+                <button className={darkMode ? 'btn-change btn-dark btn-delete' : 'btn-change btn-delete'} onClick={() => deleteSubmission(submissionId)}>Delete</button>
+                : null
+            }
         </div>
         <Comments submissionId={submissionId}/>
     </div>
