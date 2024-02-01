@@ -1,5 +1,5 @@
 .about-page {
-    min-height: 100vh;
+    /* min-height: 100vh; */
     padding: 40px 72px;
 
     display: flex;
@@ -103,7 +103,7 @@ aside img {
     }
 
     aside img {
-        height: fit-content;
+        max-height: fit-content;
     }
 
     .about-details div {
